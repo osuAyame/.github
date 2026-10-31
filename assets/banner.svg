@@ -1,0 +1,26 @@
+<svg width="100%" height="240" viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;display=swap');
+      .title { font-family: 'Comfortaa', sans-serif; font-size: 160px; font-weight: 700; fill: #cda8ff; text-anchor: middle; dominant-baseline: central; letter-spacing: 2px; }
+    </style>
+  </defs>
+  
+  <!-- Large pink corner gradients -->
+  <path d="M0,0 L250,0 A250,250 0 0,1 0,250 Z" fill="#fbc2eb" opacity="0.6"/>
+  <path d="M1000,240 L750,240 A250,250 0 0,1 1000,-10 Z" fill="#fbc2eb" opacity="0.6"/>
+  
+  <!-- Floating circles -->
+  <circle cx="180" cy="180" r="25" fill="none" stroke="#fbc2eb" stroke-width="3" opacity="0.8"/>
+  <circle cx="820" cy="60" r="10" fill="#fbc2eb" opacity="0.8"/>
+  
+  <!-- Diagonal lines -->
+  <line x1="280" y1="40" x2="330" y2="90" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
+  <line x1="300" y1="40" x2="350" y2="90" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
+  
+  <line x1="720" y1="150" x2="670" y2="200" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
+  <line x1="700" y1="150" x2="650" y2="200" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Main Text -->
+  <text x="50%" y="52%" class="title">Ayame</text>
+</svg>
