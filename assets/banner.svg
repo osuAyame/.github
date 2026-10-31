@@ -2,25 +2,64 @@
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;display=swap');
-      .title { font-family: 'Comfortaa', sans-serif; font-size: 160px; font-weight: 700; fill: #cda8ff; text-anchor: middle; dominant-baseline: central; letter-spacing: 2px; }
+
+      .title {
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 130px;
+        font-weight: 700;
+        fill: #cda8ff;
+        text-anchor: middle;
+        dominant-baseline: central;
+        letter-spacing: 2px;
+        transform-origin: center;
+        animation: pulse 3s ease-in-out infinite;
+      }
+
+      .bubble { fill: #fbc2eb; opacity: 0.6; }
+      .bubble-outline { fill: none; stroke: #fbc2eb; stroke-width: 2; opacity: 0.6; }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+      }
+
+      @keyframes float1 {
+        0%, 100% { transform: translateY(0); opacity: 0.6; }
+        50% { transform: translateY(-15px); opacity: 0.2; }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translateY(0); opacity: 0.4; }
+        50% { transform: translateY(-25px); opacity: 0.8; }
+      }
+      @keyframes float3 {
+        0%, 100% { transform: translateY(0); opacity: 0.5; }
+        50% { transform: translateY(-10px); opacity: 0.9; }
+      }
+
+      .b1 { animation: float1 4s ease-in-out infinite; }
+      .b2 { animation: float2 5s ease-in-out infinite 1s; }
+      .b3 { animation: float3 3s ease-in-out infinite 0.5s; }
+      .b4 { animation: float1 6s ease-in-out infinite 2s; }
+      .b5 { animation: float2 4.5s ease-in-out infinite 1.5s; }
     </style>
   </defs>
-  
-  <!-- Large pink corner gradients -->
-  <path d="M0,0 L250,0 A250,250 0 0,1 0,250 Z" fill="#fbc2eb" opacity="0.6"/>
-  <path d="M1000,240 L750,240 A250,250 0 0,1 1000,-10 Z" fill="#fbc2eb" opacity="0.6"/>
-  
-  <!-- Floating circles -->
-  <circle cx="180" cy="180" r="25" fill="none" stroke="#fbc2eb" stroke-width="3" opacity="0.8"/>
-  <circle cx="820" cy="60" r="10" fill="#fbc2eb" opacity="0.8"/>
-  
-  <!-- Diagonal lines -->
-  <line x1="280" y1="40" x2="330" y2="90" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
-  <line x1="300" y1="40" x2="350" y2="90" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
-  
-  <line x1="720" y1="150" x2="670" y2="200" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
-  <line x1="700" y1="150" x2="650" y2="200" stroke="#fbc2eb" stroke-width="3" opacity="0.6"/>
-  
-  <!-- Main Text -->
+
+  <!-- Large Pink Corner Gradients -->
+  <path d="M0,0 L250,0 A250,250 0 0,1 0,250 Z" fill="#fbc2eb" opacity="0.3"/>
+  <path d="M1000,240 L750,240 A250,250 0 0,1 1000,-10 Z" fill="#fbc2eb" opacity="0.3"/>
+
+  <!-- Floating Bubbles -->
+  <circle cx="150" cy="150" r="15" class="bubble b1" />
+  <circle cx="300" cy="80" r="8" class="bubble-outline b2" />
+  <circle cx="450" cy="180" r="10" class="bubble b3" />
+  <circle cx="700" cy="70" r="12" class="bubble-outline b4" />
+  <circle cx="850" cy="160" r="20" class="bubble b5" />
+  <circle cx="600" cy="200" r="5" class="bubble b2" />
+  <circle cx="250" cy="40" r="6" class="bubble-outline b1" />
+  <circle cx="800" cy="40" r="10" class="bubble b3" />
+  <circle cx="100" cy="60" r="8" class="bubble b4" />
+  <circle cx="900" cy="100" r="5" class="bubble-outline b5" />
+
+  <!-- Main Animated Text -->
   <text x="50%" y="52%" class="title">Ayame</text>
 </svg>
