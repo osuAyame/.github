@@ -9,7 +9,7 @@
 **Ayame** is a private osu! server hosted in the EU, with low ping for European players,
 extra gameplay modes, and every supporter perk unlocked for free.
 
-<img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/divider.svg" width="70%" alt="" />
+<img src="https://raw.githubusercontent.com/osuAyame/.github/assets/divider.svg" width="70%" alt="" />
 
 </div>
 
@@ -18,34 +18,34 @@ extra gameplay modes, and every supporter perk unlocked for free.
 <table align="center">
   <tr>
     <td align="center" width="33%">
-      <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/icons/modes.svg" width="72" height="72" alt="" />
+      <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/icons/modes.svg" width="72" height="72" alt="" />
       <h4>All Modes</h4>
       <sub>osu!standard, taiko, catch, and mania</sub>
     </td>
     <td align="center" width="33%">
-      <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/icons/autopilot.svg" width="72" height="72" alt="" />
+      <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/icons/autopilot.svg" width="72" height="72" alt="" />
       <h4>Relax & Autopilot</h4>
       <sub>Relax on standard, taiko, and catch.<br>Autopilot on standard.</sub>
     </td>
     <td align="center" width="33%">
-      <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/icons/pp.svg" width="72" height="72" alt="" />
+      <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/icons/pp.svg" width="72" height="72" alt="" />
       <h4>Custom pp</h4>
       <sub>Our own pp system, built for this server</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/icons/leaderboard.svg" width="72" height="72" alt="" />
+      <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/icons/leaderboard.svg" width="72" height="72" alt="" />
       <h4>Live Leaderboards</h4>
       <sub>Global and country rankings, updated with every score</sub>
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/icons/supporter.svg" width="72" height="72" alt="" />
+      <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/icons/supporter.svg" width="72" height="72" alt="" />
       <h4>Free Supporter</h4>
       <sub>Every perk, for every player, no payment needed</sub>
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/icons/eu.svg" width="72" height="72" alt="" />
+      <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/icons/eu.svg" width="72" height="72" alt="" />
       <h4>EU Hosted</h4>
       <sub>Low latency across Europe</sub>
     </td>
@@ -53,7 +53,7 @@ extra gameplay modes, and every supporter perk unlocked for free.
 </table>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/divider.svg" width="70%" alt="" />
+  <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/divider.svg" width="70%" alt="" />
 </p>
 
 <h3 align="center">Getting Started</h3>
@@ -77,7 +77,7 @@ Launch osu! with the `-devserver ayame.lol` flag, then log in with your Ayame ac
 </div>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/divider.svg" width="70%" alt="" />
+  <img src="https://raw.githubusercontent.com/osuAyame/.github/assets/divider.svg" width="70%" alt="" />
 </p>
 
 <h3 align="center">Community</h3>
@@ -95,6 +95,6 @@ Please read the [rules](https://ayame.lol/rules) before you play.
 
 <sub>Built on [bancho.py](https://github.com/osuAkatsuki/bancho.py) · Banner by [artist](https://example.com)</sub>
 
-<img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/footer.svg" width="100%" alt="" />
+<img src="https://raw.githubusercontent.com/osuAyame/.github/assets/footer.svg" width="100%" alt="" />
 
 </div>
