@@ -4,9 +4,9 @@
 
 ### 🎯 About
 
-<img src="../assets/icon-gamepad.svg" width="22" height="22" align="middle"> A custom osu! private server<br>
-<img src="../assets/icon-sliders.svg" width="22" height="22" align="middle"> Custom scoring and ranking<br>
-<img src="../assets/icon-chart.svg" width="22" height="22" align="middle"> Leaderboards, stats, and more
+<img src="../assets/icon-gamepad.svg" width="22" height="22" align="absmiddle"> A custom osu! private server<br>
+<img src="../assets/icon-sliders.svg" width="22" height="22" align="absmiddle"> Custom scoring and ranking<br>
+<img src="../assets/icon-chart.svg" width="22" height="22" align="absmiddle"> Leaderboards, stats, and more
 
 [![animated-line](https://github.com/readme-SVG/animated-line/blob/main/STORAGE/line-svg-DCB9D7.svg)](https://github.com/readme-SVG/animated-line)
 
