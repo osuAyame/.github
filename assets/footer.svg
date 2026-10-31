@@ -4,7 +4,41 @@
       <stop offset="0%" stop-color="#1a1a2e"/>
       <stop offset="100%" stop-color="#DCB9D7"/>
     </linearGradient>
+
+    <linearGradient id="waveGrad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DCB9D7" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#DCB9D7" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#DCB9D7" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#DCB9D7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- This mask creates the wavy top edge -->
+    <mask id="waveMaskFooter">
+      <!-- Fill the whole area white (visible) -->
+      <rect width="2400" height="120" fill="white" />
+      <!-- Draw a black wavy shape over the top to make it transparent -->
+      <path d="M 0 10 Q 150 -10 300 10 T 600 10 T 900 10 T 1200 10 T 1500 10 T 1800 10 T 2100 10 T 2400 10 L 2400 -50 L 0 -50 Z" fill="black">
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="8s" repeatCount="indefinite" />
+      </path>
+    </mask>
   </defs>
-  <rect width="1200" height="120" fill="url(#bg)"/>
-  <text x="600" y="70" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" letter-spacing="6">MADE WITH ♥ BY THE AYAME TEAM</text>
+  
+  <!-- The background gradient is masked to have a wavy top -->
+  <rect width="1200" height="120" fill="url(#bg)" mask="url(#waveMaskFooter)" />
+
+  <!-- Glowing wavy line tracing the top edge of the footer -->
+  <g>
+    <!-- Glow layer -->
+    <path d="M 0 10 Q 150 -10 300 10 T 600 10 T 900 10 T 1200 10 T 1500 10 T 1800 10 T 2100 10 T 2400 10" fill="none" stroke="url(#waveGrad)" stroke-width="6" stroke-opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="8s" repeatCount="indefinite" />
+    </path>
+    <!-- Core line -->
+    <path d="M 0 10 Q 150 -10 300 10 T 600 10 T 900 10 T 1200 10 T 1500 10 T 1800 10 T 2100 10 T 2400 10" fill="none" stroke="url(#waveGrad)" stroke-width="2">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="8s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Text moved down slightly to accommodate the wave -->
+  <text x="600" y="65" text-anchor="middle" font-family="Comfortaa, Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" letter-spacing="6">MADE WITH ♥ BY THE AYAME TEAM</text>
+  <text x="600" y="90" text-anchor="middle" font-family="Comfortaa, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#f0e6ef" letter-spacing="4">OSU! PRIVATE SERVER</text>
 </svg>
