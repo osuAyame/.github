@@ -1,14 +1,12 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/osuAyame/.github/main/assets/banner.svg" alt="Ayame banner" width="100%">
-
-[![animated-line](https://github.com/readme-SVG/animated-line/blob/main/STORAGE/line-svg-DCB9D7.svg)](https://github.com/readme-SVG/animated-line)
+<img src="../assets/banner.svg" alt="Ayame banner" width="89%">
 
 ### 🎯 About
 
-🎮 A custom osu! private server<br>
-🛠️ Open-source tooling powering the server<br>
-🌐 Resources for players and contributors
+<img src="../assets/icon-gamepad.svg" width="22" height="22" align="middle"> A custom osu! private server<br>
+<img src="../assets/icon-sliders.svg" width="22" height="22" align="middle"> Custom scoring and ranking<br>
+<img src="../assets/icon-chart.svg" width="22" height="22" align="middle"> Leaderboards, stats, and more
 
 [![animated-line](https://github.com/readme-SVG/animated-line/blob/main/STORAGE/line-svg-DCB9D7.svg)](https://github.com/readme-SVG/animated-line)
 
@@ -16,8 +14,6 @@
 
 [Discord](https://discord.gg/yourinvite) &nbsp;•&nbsp; [Website](https://your-server.com) &nbsp;•&nbsp; [Contact](mailto:contact@your-server.com)
 
-[![animated-line](https://github.com/readme-SVG/animated-line/blob/main/STORAGE/line-svg-DCB9D7.svg)](https://github.com/readme-SVG/animated-line)
-
-<sub>Made with ❤️ by the Ayame team</sub>
+<img src="../assets/footer.svg" alt="Ayame footer" width="89%">
 
 </div>
