@@ -6,5 +6,5 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="120" fill="url(#bg)"/>
-  <text x="600" y="58" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" letter-spacing="6">MADE WITH ♥ BY THE AYAME TEAM</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" letter-spacing="6">MADE WITH ♥ BY THE AYAME TEAM</text>
 </svg>
