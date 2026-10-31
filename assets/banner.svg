@@ -11,55 +11,51 @@
         text-anchor: middle;
         dominant-baseline: central;
         letter-spacing: 2px;
-        transform-origin: center;
-        animation: pulse 3s ease-in-out infinite;
       }
 
-      .bubble { fill: #fbc2eb; opacity: 0.6; }
-      .bubble-outline { fill: none; stroke: #fbc2eb; stroke-width: 2; opacity: 0.6; }
+      .bubble { fill: #fbc2eb; }
+      .bubble-outline { fill: none; stroke: #fbc2eb; stroke-width: 2; }
 
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.03); }
+      /* Smooth, elegant floating animations */
+      @keyframes drift1 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+        50% { transform: translate(15px, -20px); opacity: 0.7; }
       }
-
-      @keyframes float1 {
-        0%, 100% { transform: translateY(0); opacity: 0.6; }
-        50% { transform: translateY(-15px); opacity: 0.2; }
+      @keyframes drift2 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.5; }
+        50% { transform: translate(-20px, -15px); opacity: 0.2; }
       }
-      @keyframes float2 {
-        0%, 100% { transform: translateY(0); opacity: 0.4; }
-        50% { transform: translateY(-25px); opacity: 0.8; }
-      }
-      @keyframes float3 {
-        0%, 100% { transform: translateY(0); opacity: 0.5; }
-        50% { transform: translateY(-10px); opacity: 0.9; }
+      @keyframes drift3 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.2; }
+        50% { transform: translate(10px, 25px); opacity: 0.6; }
       }
 
-      .b1 { animation: float1 4s ease-in-out infinite; }
-      .b2 { animation: float2 5s ease-in-out infinite 1s; }
-      .b3 { animation: float3 3s ease-in-out infinite 0.5s; }
-      .b4 { animation: float1 6s ease-in-out infinite 2s; }
-      .b5 { animation: float2 4.5s ease-in-out infinite 1.5s; }
+      /* Applying different speeds and delays */
+      .b1 { animation: drift1 6s ease-in-out infinite; }
+      .b2 { animation: drift2 8s ease-in-out infinite 1s; }
+      .b3 { animation: drift3 5s ease-in-out infinite 2s; }
+      .b4 { animation: drift1 7s ease-in-out infinite 0.5s; }
+      .b5 { animation: drift2 9s ease-in-out infinite 3s; }
+      .b6 { animation: drift3 6.5s ease-in-out infinite 1.5s; }
     </style>
   </defs>
 
   <!-- Large Pink Corner Gradients -->
-  <path d="M0,0 L250,0 A250,250 0 0,1 0,250 Z" fill="#fbc2eb" opacity="0.3"/>
-  <path d="M1000,240 L750,240 A250,250 0 0,1 1000,-10 Z" fill="#fbc2eb" opacity="0.3"/>
+  <path d="M0,0 L250,0 A250,250 0 0,1 0,250 Z" fill="#fbc2eb" opacity="0.25"/>
+  <path d="M1000,240 L750,240 A250,250 0 0,1 1000,-10 Z" fill="#fbc2eb" opacity="0.25"/>
 
   <!-- Floating Bubbles -->
-  <circle cx="150" cy="150" r="15" class="bubble b1" />
-  <circle cx="300" cy="80" r="8" class="bubble-outline b2" />
+  <circle cx="150" cy="150" r="14" class="bubble b1" />
+  <circle cx="300" cy="80" r="7" class="bubble-outline b2" />
   <circle cx="450" cy="180" r="10" class="bubble b3" />
   <circle cx="700" cy="70" r="12" class="bubble-outline b4" />
-  <circle cx="850" cy="160" r="20" class="bubble b5" />
-  <circle cx="600" cy="200" r="5" class="bubble b2" />
-  <circle cx="250" cy="40" r="6" class="bubble-outline b1" />
-  <circle cx="800" cy="40" r="10" class="bubble b3" />
+  <circle cx="850" cy="160" r="18" class="bubble b5" />
+  <circle cx="600" cy="200" r="5" class="bubble b6" />
+  <circle cx="250" cy="40" r="6" class="bubble-outline b3" />
+  <circle cx="800" cy="40" r="9" class="bubble b2" />
   <circle cx="100" cy="60" r="8" class="bubble b4" />
-  <circle cx="900" cy="100" r="5" class="bubble-outline b5" />
+  <circle cx="900" cy="100" r="5" class="bubble-outline b1" />
 
-  <!-- Main Animated Text -->
+  <!-- Main Static Text -->
   <text x="50%" y="52%" class="title">Ayame</text>
 </svg>
