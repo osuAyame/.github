@@ -1,44 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" role="img" aria-labelledby="bannerTitle">
+  <title id="bannerTitle">AYAME — osu! private server banner</title>
+
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#1a1a2e"/>
       <stop offset="100%" stop-color="#DCB9D7"/>
     </linearGradient>
-    
-    <linearGradient id="waveGrad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#DCB9D7" stop-opacity="0"/>
-      <stop offset="15%" stop-color="#DCB9D7" stop-opacity="1"/>
-      <stop offset="85%" stop-color="#DCB9D7" stop-opacity="1"/>
+
+    <!-- soft breathing glow in the dark corner -->
+    <radialGradient id="accentGlow" cx="150" cy="24" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DCB9D7" stop-opacity="0.30"/>
       <stop offset="100%" stop-color="#DCB9D7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- shimmer riding the wave: one tile = exactly one travel distance (1200px),
+         spreadMethod="repeat" makes the pattern periodic, so the 12s translate
+         loop from 0 to -1200 is pixel-identical at the seam -->
+    <linearGradient id="lineGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0" spreadMethod="repeat">
+      <stop offset="0"    stop-color="#DCB9D7" stop-opacity="0.18"/>
+      <stop offset="0.10" stop-color="#DCB9D7" stop-opacity="0.95"/>
+      <stop offset="0.22" stop-color="#DCB9D7" stop-opacity="1"/>
+      <stop offset="0.42" stop-color="#DCB9D7" stop-opacity="0.50"/>
+      <stop offset="0.62" stop-color="#DCB9D7" stop-opacity="0.25"/>
+      <stop offset="0.82" stop-color="#DCB9D7" stop-opacity="0.18"/>
+      <stop offset="1"    stop-color="#DCB9D7" stop-opacity="0.18"/>
     </linearGradient>
 
-    <!-- This mask creates the wavy bottom edge -->
+    <!-- same shimmer profile, luminous near-white core so the sweep stays
+         visible even over the pink end of the background -->
+    <linearGradient id="coreGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0" spreadMethod="repeat">
+      <stop offset="0"    stop-color="#f3e3f0" stop-opacity="0.35"/>
+      <stop offset="0.10" stop-color="#f8eef6" stop-opacity="1"/>
+      <stop offset="0.22" stop-color="#f8eef6" stop-opacity="1"/>
+      <stop offset="0.42" stop-color="#f3e3f0" stop-opacity="0.70"/>
+      <stop offset="0.62" stop-color="#f3e3f0" stop-opacity="0.40"/>
+      <stop offset="0.82" stop-color="#f3e3f0" stop-opacity="0.35"/>
+      <stop offset="1"    stop-color="#f3e3f0" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <!-- static edge fade so the lines melt away at the left/right borders -->
+    <linearGradient id="fadeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
+      <stop offset="0"    stop-color="#000000"/>
+      <stop offset="0.06" stop-color="#ffffff"/>
+      <stop offset="0.94" stop-color="#ffffff"/>
+      <stop offset="1"    stop-color="#000000"/>
+    </linearGradient>
+    <mask id="edgeFade">
+      <rect width="1200" height="120" fill="url(#fadeGrad)"/>
+    </mask>
+
+    <!-- wavy bottom cut; the wave pattern repeats every 1200px, so translating
+         by exactly -1200 lands on an identical shape -->
     <mask id="waveMask">
-      <!-- Fill the whole area white (visible) -->
-      <rect width="2400" height="120" fill="white" />
-      <!-- Draw a black wavy shape over the bottom to make it transparent -->
-      <path d="M 0 110 Q 150 130 300 110 T 600 110 T 900 110 T 1200 110 T 1500 110 T 1800 110 T 2100 110 T 2400 110 L 2400 150 L 0 150 Z" fill="black">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="8s" repeatCount="indefinite" />
+      <rect width="2400" height="120" fill="#ffffff"/>
+      <path d="M 0 110 Q 150 130 300 110 Q 450 94 600 110 Q 750 132 900 110 Q 1050 96 1200 110 Q 1350 130 1500 110 Q 1650 94 1800 110 Q 1950 132 2100 110 Q 2250 96 2400 110 L 2400 170 L 0 170 Z" fill="#000000">
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="12s" repeatCount="indefinite"/>
       </path>
     </mask>
   </defs>
-  
-  <!-- The background gradient is masked to have a wavy bottom -->
-  <rect width="1200" height="120" fill="url(#bg)" mask="url(#waveMask)" />
 
-  <!-- Glowing wavy line tracing the edge of the banner -->
-  <g>
-    <!-- Glow layer -->
-    <path d="M 0 110 Q 150 130 300 110 T 600 110 T 900 110 T 1200 110 T 1500 110 T 1800 110 T 2100 110 T 2400 110" fill="none" stroke="url(#waveGrad)" stroke-width="6" stroke-opacity="0.3">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="8s" repeatCount="indefinite" />
+  <!-- background, cut by the traveling wave -->
+  <g mask="url(#waveMask)">
+    <rect width="1200" height="120" fill="url(#bg)"/>
+    <rect width="1200" height="120" fill="url(#accentGlow)">
+      <animate attributeName="opacity" values="0.15;1;0.15" keyTimes="0;0.5;1" dur="12s" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- wave lines -->
+  <g mask="url(#edgeFade)" fill="none" stroke-linecap="round">
+    <!-- slower echo wave weaving around the edge -->
+    <path d="M 0 104 Q 150 116 300 104 Q 450 94 600 104 Q 750 118 900 104 Q 1050 96 1200 104 Q 1350 116 1500 104 Q 1650 94 1800 104 Q 1950 118 2100 104 Q 2250 96 2400 104 Q 2550 116 2700 104 Q 2850 94 3000 104 Q 3150 118 3300 104 Q 3450 96 3600 104" stroke="#DCB9D7" stroke-width="1.5" opacity="0.4">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="18s" repeatCount="indefinite"/>
     </path>
-    <!-- Core line -->
-    <path d="M 0 110 Q 150 130 300 110 T 600 110 T 900 110 T 1200 110 T 1500 110 T 1800 110 T 2100 110 T 2400 110" fill="none" stroke="url(#waveGrad)" stroke-width="2">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="8s" repeatCount="indefinite" />
+    <!-- glow layer, gently pulsing -->
+    <path d="M 0 110 Q 150 130 300 110 Q 450 94 600 110 Q 750 132 900 110 Q 1050 96 1200 110 Q 1350 130 1500 110 Q 1650 94 1800 110 Q 1950 132 2100 110 Q 2250 96 2400 110" stroke="url(#lineGrad)" stroke-width="6" stroke-opacity="0.35">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.3;0.6;0.3" keyTimes="0;0.5;1" dur="6s" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" repeatCount="indefinite"/>
+    </path>
+    <!-- core line -->
+    <path d="M 0 110 Q 150 130 300 110 Q 450 94 600 110 Q 750 132 900 110 Q 1050 96 1200 110 Q 1350 130 1500 110 Q 1650 94 1800 110 Q 1950 132 2100 110 Q 2250 96 2400 110" stroke="url(#coreGrad)" stroke-width="2.25">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1200 0" dur="12s" repeatCount="indefinite"/>
     </path>
   </g>
 
-  <!-- Text moved up slightly to accommodate the wave -->
   <text x="600" y="55" text-anchor="middle" font-family="Comfortaa, Segoe UI, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="6">AYAME</text>
   <text x="600" y="82" text-anchor="middle" font-family="Comfortaa, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#f0e6ef" letter-spacing="4">OSU! PRIVATE SERVER</text>
 </svg>
